@@ -1,20 +1,19 @@
-
-
 :root {
-/*   colors */
-  --bgColor: #E1F3FF;
-  --mainColor: #765DBA;
+  /*   colors */
+  --bgColor: #e1f3ff;
+  --mainColor: #765dba;
   --white: white;
   --black: black;
-  --color: #20B9FF;
+  --color: #20b9ff;
 
-/*   fonts */
-  --font1: 'Fraunces', serif;
-  --font2: 'Montserrat', sans-serif;
-  --font3: 'Poppins', sans-serif;
+  /*   fonts */
+  --font1: "Fraunces", serif;
+  --font2: "Montserrat", sans-serif;
+  --font3: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -41,7 +40,7 @@ nav {
   font-size: 40px;
   font-family: var(--font1);
 }
-nav a{
+nav a {
   color: var(--white);
   text-decoration: none;
 }
@@ -50,7 +49,7 @@ span {
   color: var(--color);
 }
 
-.nav-links{
+.nav-links {
   text-align: right;
   flex: 1;
 }
@@ -62,15 +61,15 @@ span {
   position: relative;
 }
 
-.nav-links ul li a{
-font-size: 14px;
+.nav-links ul li a {
+  font-size: 14px;
 }
 
-.nav-links ul li a:active{
+.nav-links ul li a:active {
   color: var(--color);
 }
 .main-container {
-/*   display: flex;
+  /*   display: flex;
   width: 1000px;
   height: 1000px;
   margin: 100px;
@@ -82,15 +81,13 @@ font-size: 14px;
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
-  
 }
- 
+
 .phone-container {
   width: 50%;
   height: 100%;
   position: relative;
 }
-
 
 .sub-container {
   width: 85%;
@@ -110,14 +107,13 @@ font-size: 14px;
   height: 100%;
   max-height: 100%;
   position: relative;
-  
 }
 
 .form-container {
   width: 50%;
   height: 100%;
   position: relative;
-/*   background: var(--bgColor); */
+  /*   background: var(--bgColor); */
 }
 
 .mini-container {
@@ -131,20 +127,18 @@ font-size: 14px;
   position: relative;
   padding: 10px;
   box-sizing: border-box;
-/*     border: 2px solid red; */
+  /*     border: 2px solid red; */
 }
-  
 
 form {
   width: 90%;
   max-width: 90%;
   height: 90%;
   max-height: 90;
-  margin-left:30px;
-/*   border: 2px solid black; */
-   position: relative;
-padding: 15px 0;
- 
+  margin-left: 30px;
+  /*   border: 2px solid black; */
+  position: relative;
+  padding: 15px 0;
 }
 
 label {
@@ -155,16 +149,38 @@ label {
 
 input {
   padding: 5px 2px;
-  border: transparent; 
+  border: transparent;
   border-radius: 5px;
 }
+#number {
+  display: flex;
+  width: 75%;
+}
+.network-wrapper {
+  width: 100%;
+  display: flex;
+}
+.network {
+  transition: all 200ms ease;
+  display: none;
 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.network img {
+  border-radius: 50%;
+}
+.show-network {
+  display: flex;
+}
 input:hover {
-  border: 2px solid var(--color); 
+  border: 2px solid var(--color);
   transition: 0.5s;
 }
 
-input, button {
+input,
+button {
   width: 90%;
   max-width: 90%;
   margin: 10px 20px;
@@ -173,7 +189,7 @@ input, button {
 button {
   background: var(--mainColor);
   padding: 10px;
-  border: transparent; 
+  border: transparent;
   border-radius: 10px;
   color: var(--white);
   font-size: 20px;
@@ -181,7 +197,7 @@ button {
 
 button:hover {
   background: var(--color);
-   color: var(--mainColor);
+  color: var(--mainColor);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -191,6 +207,6 @@ p {
   font-size: 12px;
 }
 
-p a{
+p a {
   text-decoration: none;
 }
