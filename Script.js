@@ -4,8 +4,17 @@ let modalBackdrop = document.querySelector(".modal-backdrop");
 let modalOverlay = document.querySelector(".modal-overlay");
 let closeBtn = document.querySelector(".close-btn");
 let formSubmit = document.querySelector(".form");
+let pageLoader = document.querySelector(".page-loader");
+
+setTimeout(() => {
+  pageLoader.style.display = "none";
+}, 2000);
 formSubmit.addEventListener("submit", (event) => {
+  pageLoader.style.display = "flex";
   event.preventDefault();
+  setTimeout(() => {
+    pageLoader.style.display = "none";
+  }, 2000);
   modalBackdrop.style.display = "flex";
   modalOverlay.style.display = "flex";
 });
