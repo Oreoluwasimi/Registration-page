@@ -1,5 +1,24 @@
 let netWorkImage = document.querySelector(".netWork-image");
 let networksLogo = (document.querySelector(".network").style.display = "flex");
+let modalBackdrop = document.querySelector(".modal-backdrop");
+let modalOverlay = document.querySelector(".modal-overlay");
+let closeBtn = document.querySelector(".close-btn");
+let formSubmit = document.querySelector(".form");
+formSubmit.addEventListener("submit", (event) => {
+  event.preventDefault();
+  modalBackdrop.style.display = "flex";
+  modalOverlay.style.display = "flex";
+});
+
+modalBackdrop.addEventListener("click", () => {
+  modalBackdrop.style.display = "none";
+  modalOverlay.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => {
+  modalBackdrop.style.display = "none";
+  modalOverlay.style.display = "none";
+});
 
 const prefix = [
   "0803",
