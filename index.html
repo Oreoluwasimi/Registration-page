@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Registration Page</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Montserrat:wght@500&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <section class="header">
-    <nav>
-      <a class="logo" href="index.html">Kon<span>nect</span></a>
-      <div class="nav-links">
-        <ul>
-         <li> <a href="#"> Home </a> </li>
-         <li> <a href="#"> Contact </a> </li>
-         <li> <a href="index.html"> Register </a> </li> 
-        </ul>
-       
-      </div>
-    </nav>
-  </section>
-  <main>
-    <div class="main-container">
-      <div class="phone-container"> 
-        <div class="sub-container"> <img src="vector.jpg"               alt="phone-image">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Montserrat:wght@500&family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./Script.js"></script>
+  </head>
+  <script></script>
+     
+    <section class="header">
+      <nav>
+        <a class="logo" href="index.html">Kon<span>nect</span></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> Contact </a></li>
+            <li><a href="index.html"> Register </a></li>
+          </ul>
         </div>
-      </div>  
-      <div class="form-container">
-        <div class="mini-container"> 
-          <form> 
-            <div >
-              <label for="name"> Full Name </label>
-              <input type="text" id="name" required>
-            </div>
-            <div>
-              <label for="username"> Username </label>
-              <input type="text" id="username" required>
-            </div>
-              <div>
-              <label for="email"> Email Address</label>
-              <input type="email" id="email" required>
-            </div>
-              <div>
-              <label for="phone-number"> Phone Number </label>
-              <input type="tel" id="number" required>
-            </div>
-            <div>
-              <label for="password"> Password </label>
-              <input type="password" id="password" required>
-              </div>
-        
-            <button> Register </button>
-            <p> Contact the <a href="#"> help center </a> for assistance.</p>
-          </form>
-        </div>
-      </div>
+      </nav>
+    </section>
+    <main>
+      <div class="page-loader">
+      <img src="./img/load.gif" alt="" />
     </div>
-  </main>
-<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-</body>
+    <div class="modal-backdrop"></div>
+    <div class="modal-overlay">
+      <div>
+        <div><h3>Registration Successfully</h3></div>
+        <div class="succesful"><img src="./img/done.png" alt="" /></div>
+        <div class="btn-container">
+          <button class="close-btn">Close</button>
+        </div>
+     </div>
+    </div>
+      <div class="main-container">
+        <div class="phone-container">
+          <div class="sub-container">
+            <img src="./img/vector.jpg" alt="phone-image" />
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="mini-container">
+            <form class="form">
+              <div>
+                <label for="name"> Full Name </label>
+                <input type="text" id="name" required />
+              </div>
+              <div>
+                <label for="username"> Username </label>
+                <input type="text" id="username" required />
+              </div>
+              <div>
+                <label for="email"> Email Address</label>
+                <input type="email" id="email" required />
+              </div>
+              <div>
+                <label for="phone-number"> Phone Number </label>
+                <div class="network-wrapper">
+                  <input type="tel" id="number" value="" required />
+                  <span class="network">
+                    <img class="netWork-image" src="" alt=""
+                  /></span>
+                </div>
+              </div>
+              <div>
+                <label for="password"> Password </label>
+                <input type="password" id="password" required />
+              </div>
+
+              <button type="submit">Register</button>
+              <p>Contact the <a href="#"> help center </a> for assistance.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://replit.com/public/js/replit-badge.js"
+      theme="blue"
+      defer
+    ></script>
+  </body>
 </html>

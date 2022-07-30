@@ -1,20 +1,19 @@
-
-
 :root {
-/*   colors */
-  --bgColor: #E1F3FF;
-  --mainColor: #765DBA;
+  /*   colors */
+  --bgColor: #e1f3ff;
+  --mainColor: #765dba;
   --white: white;
   --black: black;
-  --color: #20B9FF;
+  --color: #20b9ff;
 
-/*   fonts */
-  --font1: 'Fraunces', serif;
-  --font2: 'Montserrat', sans-serif;
-  --font3: 'Poppins', sans-serif;
+  /*   fonts */
+  --font1: "Fraunces", serif;
+  --font2: "Montserrat", sans-serif;
+  --font3: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -24,6 +23,99 @@ html, body {
   font-size: 16px;
 }
 
+.modal-backdrop {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 3;
+  height: 100%;
+  background: rgb(36, 41, 47, 0.7);
+}
+.modal-overlay {
+  position: absolute;
+  display: none;
+  width: 300px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 4;
+  height: 50%;
+  transition: all 300sm ease;
+}
+.modal-overlay div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-overlay .succesful {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.modal-overlay .succesful img {
+  display: flex;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.modal-overlay .btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.modal-overlay div button {
+  display: flex;
+  width: 100px;
+  background: rgb(60, 56, 88);
+  flex-direction: row;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: all 200ms ease;
+}
+.page-loader {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in;
+  animation-name: loader;
+}
+@keyframes loader {
+  70% {
+    opacity: 0.8;
+    transition: all 300ms;
+  }
+  90% {
+    opacity: 0.9;
+    transition: all 300ms;
+  }
+}
+.page-loader img {
+  width: 10%;
+  height: 20%;
+}
+.modal-overlay div button :hover {
+}
 .header {
   background-color: var(--mainColor);
   margin: 0;
@@ -43,7 +135,7 @@ nav {
   font-size: 40px;
   font-family: var(--font1);
 }
-nav a{
+nav a {
   color: var(--white);
   text-decoration: none;
 }
@@ -52,7 +144,7 @@ span {
   color: var(--color);
 }
 
-.nav-links{
+.nav-links {
   text-align: right;
   flex: 1;
 }
@@ -64,15 +156,15 @@ span {
   position: relative;
 }
 
-.nav-links ul li a{
-font-size: 14px;
+.nav-links ul li a {
+  font-size: 14px;
 }
 
-.nav-links ul li a:active{
+.nav-links ul li a:active {
   color: var(--color);
 }
 .main-container {
-/*   display: flex;
+  /*   display: flex;
   width: 1000px;
   height: 1000px;
   margin: 100px;
@@ -84,15 +176,13 @@ font-size: 14px;
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
-  
 }
- 
+
 .phone-container {
   width: 50%;
   height: 100%;
   position: relative;
 }
-
 
 .sub-container {
   width: 85%;
@@ -110,16 +200,25 @@ font-size: 14px;
   width: 100%;
   max-width: 100%;
   height: 100%;
+  top: 20px;
   max-height: 100%;
+  animation: phone;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
   position: relative;
-  
+}
+
+@keyframes phone {
+  100% {
+    transform: translateY(-15%);
+  }
 }
 
 .form-container {
   width: 50%;
   height: 100%;
   position: relative;
-/*   background: var(--bgColor); */
+  /*   background: var(--bgColor); */
 }
 
 .mini-container {
@@ -134,20 +233,26 @@ font-size: 14px;
   padding: 10px;
   box-sizing: border-box;
 
-  /* border: 2px solid red; */
+ 
 }
-  
 
 form {
   width: 95%;
   max-width: 95%;
   height: 90%;
   max-height: 90;
+
+  margin-left: 30px;
+  /*   border: 2px solid black; */
+  position: relative;
+  padding: 15px 0;
+
   margin:5px 10px;
   /* border: 2px solid black; */
    position: relative;
 padding: 15px 0;
 margin-left: 30px;
+
 }
 
 label {
@@ -157,16 +262,38 @@ label {
 
 input {
   padding: 5px 2px;
-  border: transparent; 
+  border: transparent;
   border-radius: 5px;
 }
+#number {
+  display: flex;
+  width: 75%;
+}
+.network-wrapper {
+  width: 100%;
+  display: flex;
+}
+.network {
+  transition: all 200ms ease;
+  display: none;
 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.network img {
+  border-radius: 50%;
+}
+.show-network {
+  display: flex;
+}
 input:hover {
-  border: 2px solid var(--color); 
+  border: 2px solid var(--color);
   transition: 0.5s;
 }
 
-input, button {
+input,
+button {
   width: 90%;
   max-width: 90%;
   margin-top: 10px;
@@ -175,8 +302,13 @@ input, button {
 
 button {
   background: var(--mainColor);
+
+  padding: 10px;
+  border: transparent;
+
   padding: .6em;
   border: transparent; 
+
   border-radius: 10px;
   color: var(--white);
   font-size: 20px;
@@ -185,7 +317,7 @@ button {
 
 button:hover {
   background: var(--color);
-   color: var(--mainColor);
+  color: var(--mainColor);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -196,9 +328,10 @@ p {
   margin-left: -25px;
 }
 
-p a{
+p a {
   text-decoration: none;
 }
+
 
 @media screen and (max-width: 600px) {
  .phone-container  {
@@ -247,3 +380,4 @@ input, button {
     margin-left: -22px;
   }
 }
+
