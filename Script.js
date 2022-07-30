@@ -5,6 +5,26 @@ let modalOverlay = document.querySelector(".modal-overlay");
 let closeBtn = document.querySelector(".close-btn");
 let formSubmit = document.querySelector(".form");
 let pageLoader = document.querySelector(".page-loader");
+let closeMenu = document.querySelector(".close-menu-btn");
+let openMenu = document.querySelector(".open-menu-btn");
+let sideBar = document.querySelector(".side-bar");
+let darkTheme = document.querySelector(".desktop-dark");
+let lightTheme = document.querySelector(".desktop-light");
+darkTheme.addEventListener("click", () => {
+  darkTheme.style.display = "none";
+  lightTheme.style.display = "flex";
+});
+lightTheme.addEventListener("click", () => {
+  darkTheme.style.display = "flex";
+  lightTheme.style.display = "none";
+});
+openMenu.addEventListener("click", () => {
+  sideBar.style.transform = "translateX(0%)";
+});
+
+closeMenu.addEventListener("click", () => {
+  sideBar.style.transform = "translateX(-100%)";
+});
 
 setTimeout(() => {
   pageLoader.style.display = "none";

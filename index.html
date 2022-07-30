@@ -7,11 +7,14 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Montserrat:wght@500&family=Poppins:wght@200;300;400&display=swap"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script defer src="./Script.js"></script>
+    <!-- Google icon style  -->
+    <style></style>
+    <script defer src="./script.js"></script>
   </head>
   <script></script>
 
@@ -33,10 +36,36 @@
       <nav>
         <a class="logo" href="index.html">Kon<span>nect</span></a>
         <div class="nav-links">
-          <ul>
-            <li><a href="#"> Home </a></li>
-            <li><a href="#"> Contact </a></li>
-            <li><a href="index.html"> Register </a></li>
+          <ul>            
+            <li class="desktop-theme">
+              <span class="desktop-dark"
+                ><span class="material-icons md-36">dark_mode</span></span
+              >
+              <span class="desktop-light">
+                <span class="material-icons md-36">light_mode</span>
+              </span>
+            </li>
+              <span class="material-icons md-36 open-menu-btn">menu</span>
+              <li class="link"><a href="#"> Home </a></li>
+              <li class="link"><a href="#"> Contact </a></li>
+              <li class="link"><a href="index.html"> Register </a></li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <nav class="side-bar">               
+        <div class="bar-wrapper">
+          <ul>            
+             <div class="close-menu">
+               <span class="material-icons md-36 close-menu-btn">close</span>
+             </div>
+              <li class="link"><a href="#"> Home </a></li>
+              <li class="link"><a href="#"> Contact </a></li>
+              <li class="link"><a href="index.html"> Register </a></li>
+              <li class="mobile-theme">
+               
+              </li>
+            </div>
           </ul>
         </div>
       </nav>
